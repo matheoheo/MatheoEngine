@@ -1,12 +1,16 @@
 #include "pch.h"
 #include "Logger.h"
+#include "AssetManager.h"
+#include "ConceptDefinitions.h"
 
 int main()
 {
 	sf::RenderWindow window(sf::VideoMode({800, 600}), "Hi, My Name Is");
 	sf::CircleShape circle(100.f);
+	ksn::AssetManager<std::string, sf::Texture> textures;
+	textures.load("name", "assets/someOther.png");
 
-	ksn::gLogger("First Log Example", ksn::LOG_INFO);
+
 
 	while (window.isOpen())
 	{

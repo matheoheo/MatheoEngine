@@ -47,9 +47,9 @@ namespace ksn
 		bool mPrintToConsole;
 	};
 
-	constexpr Logger::LogType LOG_INFO = Logger::LogType::Info;
+	constexpr Logger::LogType LOG_INFO    = Logger::LogType::Info;
 	constexpr Logger::LogType LOG_WARNING = Logger::LogType::Warning;
-	constexpr Logger::LogType LOG_ERROR = Logger::LogType::Error;
+	constexpr Logger::LogType LOG_ERROR   = Logger::LogType::Error;
 	
 	template<Streamable T>
 	inline void Logger::operator()(const T& message, LogType type)
